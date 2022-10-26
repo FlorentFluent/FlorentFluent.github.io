@@ -1,25 +1,42 @@
-<body>
-    <h1>My message</h1>
-    <h2>Learn how to display JavaScript text in the browser</h2>
-    <p>Hello World</p>
-</body>
-<script type="text/javascript" src="https://macromedia--full.sandbox.my.site.com/Scheduler/lightning/lightning.out.js"></script>
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Salesforce Lightning Scheduler for Integration to Macromedia</title>
+      <!-- 1. Add Script to Header Tag -->
+      <script type="text/javascript" src="https://macromedia--full.sandbox.my.site.com/Scheduler/s/lightning/lightning.out.js"></script>   
+      <!-- 2. Add Attributes and inform your salesforce Team to include them in Lightning Scheduler -->     
+      <script type='text/javascript'>     
+         const queryString = window.location.search;
+         const urlParams = new URLSearchParams(queryString);
+         let mmLang = urlParams.get('mmLang')!= null ? urlParams.get('mmLang') : 'Deutsch';
+         let mmBrand = urlParams.get('mmBrand') != null ? urlParams.get('mmBrand') : '';
+         let mmType = urlParams.get('mmType') != null ? urlParams.get('mmType') : '';
+         let mmID = urlParams.get('mmID')!= null ? urlParams.get('mmID') : '';
+         let mmLocation = urlParams.get('mmLocation')!= null ? urlParams.get('mmLocation') : '';
+         console.log(mmType);
+      </script>         
+   </head>
+   <body>
+      <h1>This is an Integration Test from Salesforce to External Websites</h1>
+      <h2>Inbound Guest Appointment | Lightning Scheduler</h2>
+      <!-- 3. Use this Script alongwith other javascript Code -->     
+      <script>
+         $Lightning.use("c:embeddedFlowApp",
+             function() {
+                 $Lightning.createComponent(
+                     "c:embeddedFlow",
+                     {},
+                     "macromediaterminplanner", // the DOM location to insert the component
+                     function(component) { // API name of the Flow 
+               
+                     }
+                 );
+            }, "https://macromedia--full.sandbox.my.site.com/Scheduler/s"  // Site endpoint
 
-<script type="text/javascript" src="test.js"></script>
-
-<div id="scheduler" class="scheduler w-100 spacer-150">
-	<div class="container">	
-		<div class="row">
-			<div class="col-12 col-md-8">
-				<h2>Scheduler</h2>
-			</div>
-		</div>
-	</div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12" class="scheduler-sdp-container">
-                <div id="macromediaterminplanner"></div>
-            </div>
-        </div>
-    </div>
-</div>
+         );
+      </script>
+      <!-- 4. Define an Element where the Appointment Scheduler should be displayed -->
+      <div id="macromediaterminplanner">
+      </div>
+   </body>
+</html>
