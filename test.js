@@ -4,7 +4,7 @@ function() { // Callback once framework and app load
 $Lightning.createComponent(
 "c:embeddedFlow", // top-level component of your app
 {mmLang="Deutsch",mmBrand="HM"}, // attributes to set on the component when created
-"lexcontainer", // the DOM location to insert the component
+"macromediaterminplanner", // the DOM location to insert the component
 function(component) { // API name of the Flow
 component.startFlow(”Outbound_Schedule_New_Appointment”);
 }
