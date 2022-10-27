@@ -3,7 +3,7 @@
    <head>
       <title>Salesforce Lightning Scheduler for Integration to Macromedia</title>
       <!-- 1. Add Script to Header Tag -->
-      <script type="text/javascript" src="https://macromedia--full.sandbox.my.site.com/Scheduler/s/lightning/lightning.out.js"></script>   
+      <script type="text/javascript" src="https://macromedia--full.sandbox.my.site.com/Scheduler/lightning/lightning.out.js"></script>   
       <!-- 2. Add Attributes and inform your salesforce Team to include them in Lightning Scheduler -->     
       <script type='text/javascript'>     
          const queryString = window.location.search;
@@ -31,7 +31,7 @@
                         component.startFlow("Outbound_Schedule_New_Appointment");                       
                      }
                  );
-            }, "https://macromedia--full.sandbox.my.site.com/Scheduler/s/"  // Site endpoint
+            }, "https://macromedia--full.sandbox.my.site.com/Scheduler/"  // Site endpoint
          );
       </script>
       <!-- 4. Define an Element where the Appointment Scheduler should be displayed -->
