@@ -8,11 +8,7 @@
       <script type='text/javascript'>     
          const queryString = window.location.search;
          const urlParams = new URLSearchParams(queryString);
-         let mmLang = urlParams.get('mmLang')!= null ? urlParams.get('mmLang') : 'Deutsch';
-         let mmBrand = urlParams.get('mmBrand') != null ? urlParams.get('mmBrand') : '';
-         let mmType = urlParams.get('mmType') != null ? urlParams.get('mmType') : '';
-         let mmID = urlParams.get('mmID')!= null ? urlParams.get('mmID') : '';
-         let mmLocation = urlParams.get('mmLocation')!= null ? urlParams.get('mmLocation') : '';
+         let recordId = urlParams.get('recordId')!= null ? urlParams.get('recordId') : '';
          console.log(mmType);
       </script>         
    </head>
