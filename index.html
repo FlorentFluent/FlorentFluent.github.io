@@ -21,14 +21,14 @@
       <h2>Inbound Guest Appointment | Lightning Scheduler</h2>
       <!-- 3. Use this Script alongwith other javascript Code -->     
       <script>
-         $Lightning.use("c:embeddedFlowApp",
+         $Lightning.use("c:embeddedFlowAppModify",
              function() {
                  $Lightning.createComponent(
-                     "c:embeddedFlow",
+                     "c:embeddedFlowModify",
                      {},
                      "macromediaterminplanner", // the DOM location to insert the component
                      function(component) { // API name of the Flow 
-                        component.startFlow("Outbound_Schedule_New_Appointment");                       
+                        component.startFlow("New_Call_Center_Cancel_Appointment");                       
                      }
                  );
             }, "https://macromedia--full.sandbox.my.site.com/Scheduler"  // Site endpoint
